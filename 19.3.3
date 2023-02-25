@@ -48,9 +48,8 @@ info = {
 "tags": [{"id": 0,"name": "string"}],
 "status": "available"
 }
-res = requests.delete(f"https://petstore.swagger.io/v2/pet",
-                                  headers={'accept': 'application/json', 'Content-Type': 'application/json'},
-                                  data = json.dumps(info, ensure_ascii=False))
+
+res_del = requests.delete(f'https://petstore.swagger.io/v2/pet', headers={'accept': 'application/json'})
 print(f"удаление: {res.status_code}")
 print(res.text)
 print(res.json())
